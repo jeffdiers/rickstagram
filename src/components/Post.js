@@ -25,13 +25,19 @@ class Post extends React.Component {
             paddingBottom: '100%',
           }}
         />
-        <div className='flex items-center black-80 fw3 description'>
-          {this.props.post.description}
+        <div className=' items-center black-80 fw3 description'>
+          <span className='description-content'>{this.props.post.description}</span>
+
         </div>
       </Link>
     )
   }
           //<span className='red f6 pointer dim' onClick={this.handleDelete}>Delete</span>
+          //  {this.props.post.comments.map((comment) => (
+          //    <div key={comment.id} className='comments'>
+          //      <span className='author'>{comment.author} <comment className='comment-body'>{comment.body}</comment></span>
+          //    </div>
+          //  ))}
 
   handleDelete = async () => {
     await this.props.mutate({variables: {id: this.props.post.id}})

@@ -17,7 +17,6 @@ html {
 
 .box {
   width: 350px;
-  height: 452px;
 }
 
 .post {
@@ -31,9 +30,10 @@ html {
 }
 
 .post .description {
-  flex: 1;
   padding-left: 25px;
-  font-size: 25px;
+  padding-right: 25px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .detail .image {
@@ -78,4 +78,27 @@ html {
   letter-spacing: 0.46px;
   margin-top: 18px;
   margin-left: 18px;
+}
+
+.pa6 {
+  padding-top: 0;
+}
+
+.comments {
+  display: flex;
+  padding-bottom: .25em;
+  padding-top: .5em;
+}
+
+.author {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.comment-body {
+  color: black;
+}
+
+.description-content {
+  font-weight: bold;
 }

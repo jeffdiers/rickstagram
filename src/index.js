@@ -9,7 +9,7 @@ import { ApolloProvider } from 'react-apollo'
 import 'tachyons'
 import './index.css'
 
-const networkInterface = createNetworkInterface({ uri: process.env.REACT_APP_GRAPHQL_ENDPOINT })
+const networkInterface = createNetworkInterface({ uri: "https://api.graph.cool/simple/v1/cj0rjxktqd9t401026wmiwwm5" })
 
 const client = new ApolloClient({ networkInterface })
 
@@ -25,3 +25,8 @@ ReactDOM.render((
   ),
   document.getElementById('root')
 )
+
+/* 
+* puppies: https://api.graph.cool/simple/v1/cj0l8z1jl6rm80139je4ie27b
+* rickstagram:  https://api.graph.cool/simple/v1/cj0rfdko7dgyq0118yftueyyf 
+*/
