@@ -27,17 +27,16 @@ class Post extends React.Component {
         />
         <div className=' items-center black-80 fw3 description'>
           <span className='description-content'>{this.props.post.description}</span>
-
+          {this.props.post.comments.map((comment) => (
+              <div key={comment.id} className='comments'>
+                <span className='author'>{comment.author} <comment className='comment-body'>{comment.body}</comment></span>
+              </div>
+            ))}
         </div>
       </Link>
     )
   }
           //<span className='red f6 pointer dim' onClick={this.handleDelete}>Delete</span>
-          //  {this.props.post.comments.map((comment) => (
-          //    <div key={comment.id} className='comments'>
-          //      <span className='author'>{comment.author} <comment className='comment-body'>{comment.body}</comment></span>
-          //    </div>
-          //  ))}
 
   handleDelete = async () => {
     await this.props.mutate({variables: {id: this.props.post.id}})
@@ -57,3 +56,4 @@ const deleteMutation = gql`
 const PostWithMutation = graphql(deleteMutation)(Post)
 
 export default PostWithMutation
+

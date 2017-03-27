@@ -58,6 +58,11 @@ class ListPage extends React.Component {
 
 const FeedQuery = gql`query allPosts {
   allPosts(orderBy: createdAt_DESC) {
+    comments {
+      id
+      body
+      author
+    }
     id
     imageUrl
     description
