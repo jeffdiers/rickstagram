@@ -38,6 +38,8 @@ class Post extends React.Component {
   }
           //<span className='red f6 pointer dim' onClick={this.handleDelete}>Delete</span>
 
+
+
   handleDelete = async () => {
     await this.props.mutate({variables: {id: this.props.post.id}})
 

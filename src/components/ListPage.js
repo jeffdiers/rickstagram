@@ -60,8 +60,8 @@ const FeedQuery = gql`query allPosts {
   allPosts(orderBy: createdAt_DESC) {
     comments {
       id
-      body
       author
+      body
     }
     id
     imageUrl
